@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,20 +44,42 @@ namespace e_Shift_ManagementSystem
 
         }
 
+        public bool ValidateData()
+        {
+            bool IsValid = false;
+
+            IsValid = Regex.IsMatch(cusEmail.Text, 
+                @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z",
+                RegexOptions.IgnoreCase);
+
+            if(!IsValid)
+                lblEmailValid.Text = "Email format invalid";
+            else
+                lblEmailValid.Text = string.Empty;
+
+
+            return IsValid;
+            
+        }
 
 
         private void btnRegCustomer_Click(object sender, EventArgs e)
         {
             try
             {
-                CustomerCRUD cusCrud = new CustomerCRUD(cusName.Text, cusAddress.Text, cusEmail.Text, cusNIC.Text, cusContact.Text, cusStatus.Text);
+                bool FormValid = ValidateData();
+                if (FormValid)
+                {
+                    CustomerCRUD cusCrud = new CustomerCRUD(cusName.Text, cusAddress.Text, cusEmail.Text, cusNIC.Text, cusContact.Text, cusStatus.Text);
 
-                var result = cusCrud.CreateCustomer();
+                    var result = cusCrud.CreateCustomer();
 
-                if (result.IsSuccess)
-                    MessageBox.Show(result.Message);
-                else
-                    MessageBox.Show(result.Message + " :" + result.ErrorMessage);
+                    if (result.IsSuccess)
+                        MessageBox.Show(result.Message);
+                    else
+                        MessageBox.Show(result.Message + " :" + result.ErrorMessage);
+                }
+
             }
             catch (Exception er)
             {

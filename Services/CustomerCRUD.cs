@@ -5,7 +5,7 @@ namespace e_Shift_ManagementSystem.Services
 {
     class CustomerCRUD
     {
-        SqlConnection con = new SqlConnection("Data Source=mhd-shazny;Initial Catalog=eshiftDb;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=mhd-shazny;Initial Catalog=eshiftDb;Integrated Security=True");
 
         public CustomerCRUD(string cusName, string cusAddress, string cusEmail, string cusNIC, string cusContact, string cusStatus)
         {
@@ -20,6 +20,7 @@ namespace e_Shift_ManagementSystem.Services
         public CustomerCRUD()
         {
         }
+
 
         private int ID { get; set; }
         private string cusName { get; set; }

@@ -59,6 +59,10 @@ namespace e_Shift_ManagementSystem
             this.btnUpdateSubmit = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.lblEmailValid = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCustomerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Customer)).BeginInit();
@@ -162,42 +166,42 @@ namespace e_Shift_ManagementSystem
             // 
             // cusStatus
             // 
-            this.cusStatus.Location = new System.Drawing.Point(329, 640);
+            this.cusStatus.Location = new System.Drawing.Point(329, 645);
             this.cusStatus.Name = "cusStatus";
             this.cusStatus.Size = new System.Drawing.Size(418, 20);
             this.cusStatus.TabIndex = 12;
             // 
             // cusNIC
             // 
-            this.cusNIC.Location = new System.Drawing.Point(329, 593);
+            this.cusNIC.Location = new System.Drawing.Point(329, 598);
             this.cusNIC.Name = "cusNIC";
             this.cusNIC.Size = new System.Drawing.Size(418, 20);
             this.cusNIC.TabIndex = 13;
             // 
             // cusEmail
             // 
-            this.cusEmail.Location = new System.Drawing.Point(329, 551);
+            this.cusEmail.Location = new System.Drawing.Point(329, 556);
             this.cusEmail.Name = "cusEmail";
             this.cusEmail.Size = new System.Drawing.Size(418, 20);
             this.cusEmail.TabIndex = 14;
             // 
             // cusContact
             // 
-            this.cusContact.Location = new System.Drawing.Point(329, 503);
+            this.cusContact.Location = new System.Drawing.Point(329, 508);
             this.cusContact.Name = "cusContact";
             this.cusContact.Size = new System.Drawing.Size(418, 20);
             this.cusContact.TabIndex = 15;
             // 
             // cusAddress
             // 
-            this.cusAddress.Location = new System.Drawing.Point(329, 452);
+            this.cusAddress.Location = new System.Drawing.Point(329, 457);
             this.cusAddress.Name = "cusAddress";
             this.cusAddress.Size = new System.Drawing.Size(418, 20);
             this.cusAddress.TabIndex = 16;
             // 
             // cusName
             // 
-            this.cusName.Location = new System.Drawing.Point(329, 405);
+            this.cusName.Location = new System.Drawing.Point(329, 410);
             this.cusName.Name = "cusName";
             this.cusName.Size = new System.Drawing.Size(418, 20);
             this.cusName.TabIndex = 17;
@@ -205,7 +209,7 @@ namespace e_Shift_ManagementSystem
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(203, 643);
+            this.label6.Location = new System.Drawing.Point(203, 648);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 6;
@@ -214,7 +218,7 @@ namespace e_Shift_ManagementSystem
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(203, 596);
+            this.label5.Location = new System.Drawing.Point(203, 601);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(25, 13);
             this.label5.TabIndex = 7;
@@ -223,7 +227,7 @@ namespace e_Shift_ManagementSystem
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(203, 554);
+            this.label4.Location = new System.Drawing.Point(203, 559);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 8;
@@ -232,7 +236,7 @@ namespace e_Shift_ManagementSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(203, 506);
+            this.label3.Location = new System.Drawing.Point(203, 511);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 9;
@@ -241,7 +245,7 @@ namespace e_Shift_ManagementSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(203, 459);
+            this.label2.Location = new System.Drawing.Point(203, 464);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 10;
@@ -250,7 +254,7 @@ namespace e_Shift_ManagementSystem
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(203, 412);
+            this.label7.Location = new System.Drawing.Point(203, 417);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 13);
             this.label7.TabIndex = 11;
@@ -293,11 +297,59 @@ namespace e_Shift_ManagementSystem
             this.label8.TabIndex = 24;
             this.label8.Text = "Customer ID";
             // 
+            // lblEmailValid
+            // 
+            this.lblEmailValid.AutoSize = true;
+            this.lblEmailValid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailValid.ForeColor = System.Drawing.Color.Red;
+            this.lblEmailValid.Location = new System.Drawing.Point(752, 559);
+            this.lblEmailValid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmailValid.Name = "lblEmailValid";
+            this.lblEmailValid.Size = new System.Drawing.Size(0, 15);
+            this.lblEmailValid.TabIndex = 26;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(306, 709);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 27;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(448, 709);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.TabIndex = 27;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton1";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(621, 709);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(85, 17);
+            this.radioButton3.TabIndex = 27;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton1";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 827);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.lblEmailValid);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnDeleteCustomer);
@@ -358,6 +410,10 @@ namespace e_Shift_ManagementSystem
         private System.Windows.Forms.Button btnUpdateSubmit;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblEmailValid;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }
 

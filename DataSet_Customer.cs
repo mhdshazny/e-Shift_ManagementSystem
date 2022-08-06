@@ -6,3 +6,10 @@
     {
     }
 }
+
+namespace e_Shift_ManagementSystem.DataSet_CustomerTableAdapters {
+    
+    
+    public partial class Tbl_CustomerTableAdapter {
+    }
+}

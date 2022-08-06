@@ -12,5 +12,7 @@ namespace e_Shift_ManagementSystem.Services
         public bool IsSuccess { get; set; }
         public string Message { get; set; }
         public string ErrorMessage { get; set; }
+
+        public bool IsCouponGenerated { get; set; }
     }
 }
